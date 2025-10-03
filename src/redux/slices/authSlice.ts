@@ -3,13 +3,13 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 type InitialState = {
   name: string;
-  email: string;
+  description: string;
 };
 
 //Estado inicial
 const initialState: InitialState = {
   name: "",
-  email: "",
+  description: "",
 };
 
 // 1. Darle un nombre al slice
@@ -24,11 +24,14 @@ export const authSlice = createSlice({
     setNameState: (state, action: PayloadAction<string>) => {
       state.name = action.payload;
     },
+    setDescriptionState: (state, action: PayloadAction<string>) => {
+      state.description = action.payload;
+    },
   },
 });
 
 //Destructurar las actions para exportarlas de manera individual
-export const { setNameState } = authSlice.actions;
+export const { setNameState, setDescriptionState } = authSlice.actions;
 
 //Exportar el reducer del slice
 export default authSlice.reducer;
