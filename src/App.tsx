@@ -1,10 +1,10 @@
 import "./App.css";
-import Login from "./pages/Login";
+import TodoApp from "./pages/TodoApp";
 
 function App() {
   return (
     <>
-      <Login />
+      <TodoApp />
     </>
   );
 }
